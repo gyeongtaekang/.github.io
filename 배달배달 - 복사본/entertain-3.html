@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>배달음식 추천 테스트</title>
+    <link rel="stylesheet" type="text/css" href="entertain-3.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2701167441269450"
+        crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2701167441269450"
+        crossorigin="anonymous"></script>
+
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script type="text/javascript">
+        function callBackFunc(elm) {
+            text = [];
+            text.push('<ins class="adsbygoogle"');
+            text.push('style="display:inline-block;width:250px;height:250px"');
+            text.push('data-ad-client="ca-pub-7893835816116192"');
+            text.push('data-ad-slot="5918517081"></ins>');
+
+            elm.innerHTML = text.join(' ');
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJTZBZL1V5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FJTZBZL1V5');
+    </script>
+
+</head>
+
+<body>
+
+    <div class="coupang-ad-container">
+        <script src="https://ads-partners.coupang.com/g.js"></script>
+        <script>
+            new PartnersCoupang.G({
+                "id": 744317,
+                "template": "carousel",
+                "trackingCode": "AF7456221",
+                "width": "100%",
+                "height": "auto",
+                "tsource": ""
+            });
+        </script>
+        <p>※쿠팡 파트너스 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</p>
+    </div>
+
+    <div id="resultScreen">
+        <h2 id="resultTitle">당신과 성격이 맞는 연예인은...</h2>
+        <img id="resultImage" src="" alt="결과 이미지">
+        <p id="resultText"></p>
+
+        <!-- 공유 버튼 -->
+
+        <div class="share-buttons hidden">
+            <h3>공유 하기</h3>
+            <div class="button-container">
+                <!-- -------------------------------페이스북 공유-------------------------------- -->
+
+                <div id="fb-root"></div>
+                <script>(function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                <!-- Your share button code -->
+                <a href="javascript:void(0)" onclick="shareOnFacebook()">
+                    <img src="face.png" alt="Share on Facebook" style="width: 50px; height: 50px;">
+                </a>
+
+                <!-- Optional JavaScript function to manually trigger sharing -->
+                <script>
+                    function shareOnFacebook() {
+                        const url = 'https://www.your-real-domain.com/your-real-page.html'; // Replace with the URL of the page you want to share
+
+                        const shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+                        window.open(shareUrl, '_blank');
+                    }
+                </script>
+                <!-- -------------------------------여기까지 페이스북 공유-------------------------------- -->
+
+                <!-- -------------카카오톡 공유-------------------------------- -->
+                <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
+                    integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
+                    crossorigin="anonymous"></script>
+                <script>
+                    Kakao.init('dd7e24b0e83031cf907771fa6c41ff95'); // 사용하려는 앱의 JavaScript 키 입력
+                </script>
+
+                <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()" style="width: 50px; height: 50px;">
+                    <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+                        alt="카카오톡 공유 보내기 버튼" style="width: 100%; height: 100%;" />
+                </a>
+
+                <script>
+                    function shareMessage() {
+                        Kakao.Share.sendDefault({
+                            objectType: 'feed',
+                            content: {
+                                title: '너 혹시..T 야..?',
+                                description: '#MBTI #성격 #성격유형 #심리검사',
+                                imageUrl:
+                                    'https://gtae.store/image/%EB%A3%A8%ED%94%BC.png',
+                                link: {
+                                    // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+                                    mobileWebUrl: 'https://gtae.store/make.html',
+                                    webUrl: 'https://gtae.store/make.html',
+                                },
+                            },
+                            social: {
+                                likeCount: 286,
+                                commentCount: 45,
+                                sharedCount: 845,
+                            },
+                            buttons: [
+                                {
+                                    title: '웹으로 보기',
+                                    link: {
+                                        mobileWebUrl: 'https://gtae.store/',
+                                        webUrl: 'https://gtae.store/',
+                                    },
+                                },
+                                {
+                                    title: '앱으로 보기',
+                                    link: {
+                                        mobileWebUrl: 'https://gtae.store/',
+                                        webUrl: 'https://gtae.store/',
+                                    },
+                                },
+                            ],
+                        });
+                    }
+                </script>
+
+                <!-- 카카오톡 공유 -->
+            </div>
+        </div>
+        <button id="restartButton" onclick="location.href='entertain.html'">다시 하기</button>
+    </div>
+
+    <ins class="kakao_ad_area" style="display:inline-block;" data-ad-unit="DAN-d4EKBmQIpAUeQhPl" data-ad-width="320"
+        data-ad-height="50"></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+    <!-- 추천 섹션 시작 -->
+    <div id="recommendationSection">
+        <div class="recommendationHeader">
+            <h2>추천 테스트</h2>
+        </div>
+        <div class="recommendationItem">
+            <a href="https://menu-111.netlify.app/">
+                <img src="검사.png" alt="#">
+                <p>오늘 뭐 먹지?</p>
+            </a>
+        </div>
+        <div class="recommendationItem">
+            <a href="entertain.html">
+                <img src="q.jpg" alt="#">
+                <p>나와 맞는 연예인은?</p>
+            </a>
+        </div>
+        <div class="recommendationItem">
+            <a href=#">
+                <img src="검사.png" alt="#">
+                <p>추천 테스트 3</p>
+            </a>
+        </div>
+        <div class="recommendationItem">
+            <a href="#">
+                <img src="검사.png" alt="#">
+                <p>추천 테스트 3</p>
+            </a>
+        </div>
+    </div>
+    <!-- 추천 섹션 끝 -->
+
+    <script src="entertain-3.js"></script>
+</body>
+
+</html>

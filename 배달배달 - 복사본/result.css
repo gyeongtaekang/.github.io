@@ -1,0 +1,179 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color:#77AF9C;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* 전체 화면 높이 */
+}
+
+#questionScreen, #resultScreen {
+    background-color: #fff; /* 흰색 배경 */
+    width: 90%;
+    max-width: 600px;
+    margin: 20px; /* 바깥쪽 여백 */
+    padding: 20px; /* 안쪽 여백 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultImage {
+    max-width: 90%; /* 모바일 기기에 맞게 너비 조정 */
+    height: auto;
+    margin: 20px 0;
+}
+
+#restartButton {
+    background-color:#77AF9C;
+    color: white;
+    padding: 12px 24px; /* 모바일에서 쉽게 탭할 수 있도록 크기 조정 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%; /* 모바일 화면에 맞는 너비 */
+    margin-top: 20px;
+}
+
+#restartButton:hover {
+    background-color: #ccffcc;
+}
+
+h2 {
+    color: #333;
+    font-size: 20px; /* 모바일 화면에 맞게 글자 크기 조정 */
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 16px; /* 모바일 화면에 맞게 글자 크기 조정 */
+    margin: 20px 5%; /* 좌우 여백을 주어 가독성 향상 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* 버튼을 컨테이너 중앙에 배치 */
+  align-items: center; /* 버튼을 수직 방향 중앙에 배치 */
+  gap: 10px; /* 버튼 사이의 간격 */
+}
+
+/* 추천섹션 */
+
+#recommendationSection {
+    /* background-color: #f7f7f7; */
+    padding: 20px;
+    display: flex; /* Flexbox 레이아웃 적용 */
+    flex-wrap: wrap; /* 요소들이 줄 바꿈 되도록 설정 */
+    justify-content: space-around; /* 아이템들 사이에 공간을 균등하게 배분 */
+    align-items: flex-start; /* 아이템들을 상단에 정렬 */
+    max-width: 600px;
+    width: 100%; /* 전체 너비 사용 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+  }
+  
+  .recommendationHeader {
+    width: 100%; /* 제목을 섹션의 전체 너비로 설정 */
+    text-align: center; /* 제목 중앙 정렬 */
+  }
+  
+  .recommendationItem {
+    background-color: #f7f7f7;
+    display: flex; /* Flexbox 아이템으로 설정 */
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    flex-basis: calc(50% - 10px); /* 2열로 표시하기 위한 기본 너비 설정 */
+    /* 브라우저마다 flex-basis의 계산 방식이 조금씩 다를 수 있으니 테스트 필요 */
+  }
+  
+  .recommendationItem img {
+    width: 100%; /* 이미지가 아이템의 크기를 꽉 채우도록 */
+    height: auto;
+  }
+  
+  .recommendationItem p {
+    font-size: 16px; /* 텍스트 크기 조정 */
+    margin-top: 5px;
+  }
+  .recommendationItem a, .recommendationItem a:visited, .recommendationItem a:hover, .recommendationItem a:active {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 상속받아서 변경하지 않음 */
+  }
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1450px) {
+    #questionScreen, #resultScreen {
+        margin: 10px; /* 바깥쪽 여백 줄임 */
+        max-width: 100%; /* 전체 너비를 사용하도록 조정 */
+        padding: 30px; /* 패딩 증가 */
+    }
+
+    #restartButton {
+        padding: 20px 30px; /* 더 작은 화면에 맞게 버튼 크기 조정 */
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 40px; /* 더 작은 화면에 맞게 제목 크기 조정 */
+    }
+
+    p {
+        font-size: 30px; /* 더 작은 화면에 맞게 본문 글자 크기 조정 */
+    }
+
+    #resultImage {
+        max-width: 100%; /* 이미지 너비 100%로 조정 */
+    }
+}
+
+@media (max-width: 1450px) {
+    
+    #recommendationSection {
+        /* width: 100%; */
+      max-width: 100%;
+      margin: 10px; /* 모바일에서의 여백 조정 */
+      padding: 15px; /* 모바일에서의 패딩 조정 */
+      display: flex; /* Flexbox 레이아웃 적용 */
+      flex-wrap: wrap; /* 요소들이 줄 바꿈 되도록 설정 */
+      justify-content: space-around; /* 아이템들 사이에 공간을 균등하게 배분 */
+      border-radius: 10px;
+    }
+  
+    .recommendationItem {
+      margin: 5px; /* 모바일에서의 여백 줄임 */
+      flex-basis: calc(50% - 10px); /* 2열로 표시하기 위한 기본 너비 설정 */
+      /* 이미 flex-direction: column; 및 align-items: center;는 설정되어 있으므로 그대로 유지 */
+    }
+    .recommendationHeader h2 {
+      font-size: 40px; /* 모바일 화면에서의 제목 크기 조정 */
+  }
+    .recommendationItem img {
+      width: 100%; /* 이미지 크기를 부모 요소에 맞춤 */
+      height: auto;
+    }
+  
+    .recommendationItem p {
+      font-size: 40px; /* 모바일 화면에서의 텍스트 크기 조정 */
+      /* 40px은 너무 크므로 줄여서 적절한 크기로 조정 */
+    }
+  }
+
+  /* 모바일 화면을 위한 미디어 쿼리 */
+@media (max-width: 1450px) {
+  .coupang-ad-container {
+      width: 100%; /* 모바일 화면에 맞게 너비 조정 */
+      height: auto; /* 높이 자동 조정 */
+  }
+
+  .coupang-ad-container p {
+      font-size: 12px; /* 모바일 화면에 맞게 글자 크기 증가 */
+  }
+}
